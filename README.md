@@ -105,7 +105,7 @@ Minimal HEIF files consist of three boxes:
 * "meta", containing many other boxes of (you guessed it) metadata.
 * "mdat", the "media data" box. This is the data blob.
 
-heic_unpack.py is an MVP for unpacking data an HEVC decoder can display. The useful part starts with the ftyp box:
+[heic_unpack.py](heic_unpack.py) is an MVP for unpacking data an HEVC decoder can display. The useful part starts with the ftyp box:
 
 ```python
 ftyp = boxes[0]
@@ -234,7 +234,7 @@ Does it work?
 
 Try it yourself!
 
-heic_unpack.py and MP4Box extract the same Annex B data from sample images like https://github.com/nokiatech/heif/blob/gh-pages/content/images/winter_1440x960.heic -- if they're simple enough for heic_unpack.py to understand.
+[heic_unpack.py](heic_unpack.py) and MP4Box extract the same Annex B data from sample images like https://github.com/nokiatech/heif/blob/gh-pages/content/images/winter_1440x960.heic -- if they're simple enough for heic_unpack.py to understand.
 
 It passes a round-trip smoke-test, too:
 
@@ -276,7 +276,7 @@ So my answer is... yes. For a certain value of "work". I parsed only the bare mi
 Supporting more codecs
 ======================
 
-heif_unpack.py is a mode modular version of heic_unpack.py demonstrating two additional compression formats.
+[heif_unpack.py](heif_unpack.py) is a more modular version of heic_unpack.py demonstrating two additional compression formats.
 
 AVIF images follow the same basic pattern as HEIC. AV1's traditional raw-ish file format is IVF (Indeo video file), and IVF headers can be built with just the image width and height. The Alliance for Open Media even publishes AV1 specifications freely!
 
